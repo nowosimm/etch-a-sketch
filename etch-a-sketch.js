@@ -33,38 +33,38 @@ document.addEventListener("DOMContentLoaded", function () {
 // creates boards for 3 sizes
 
 function smallGrid() {
-    let graph = document.querySelector(".container");
-    graph.innerHTML = "";
-    graph.style.gridTemplateColumns = `repeat(45, 1fr)`;
-    graph.style.gridTemplateRows = `repeat(45, 1fr)`;
+    let grid = document.querySelector(".container");
+    grid.innerHTML = "";
+    grid.style.gridTemplateColumns = `repeat(45, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(45, 1fr)`;
 
     for (let i = 0; i < 45 * 45; i++) {
         let div = document.createElement("div");
-        graph.insertAdjacentElement("beforeend", div);
+        grid.insertAdjacentElement("beforeend", div);
         div.addEventListener("mouseover", colorDiv)
     }
 }
 function mediumGrid() {
-    let graph = document.querySelector(".container");
-    graph.innerHTML = "";
-    graph.style.gridTemplateColumns = `repeat(30, 1fr)`;
-    graph.style.gridTemplateRows = `repeat(30, 1fr)`;
+    let grid = document.querySelector(".container");
+    grid.innerHTML = "";
+    grid.style.gridTemplateColumns = `repeat(30, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(30, 1fr)`;
   
     for (let i = 0; i < 30 * 30; i++) {
         let div = document.createElement("div");
-        graph.insertAdjacentElement("beforeend", div);
+        grid.insertAdjacentElement("beforeend", div);
         div.addEventListener("mouseover", colorDiv)
     }
 }
 function largeGrid() {
-    let graph = document.querySelector(".container");
-    graph.innerHTML = "";
-    graph.style.gridTemplateColumns = `repeat(15, 1fr)`;
-    graph.style.gridTemplateRows = `repeat(15, 1fr)`;
+    let grid = document.querySelector(".container");
+    grid.innerHTML = "";
+    grid.style.gridTemplateColumns = `repeat(15, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(15, 1fr)`;
 
     for (let i = 0; i < 15 * 15; i++) {
         let div = document.createElement("div");
-        graph.insertAdjacentElement("beforeend", div);
+        grid.insertAdjacentElement("beforeend", div);
         div.addEventListener("mouseover", colorDiv)
     }
 }
@@ -88,9 +88,16 @@ function colorDiv(){
     
 }
 
-
 function setColor(colorChoice){
     color = colorChoice;
+}
+
+function resetBoard(){
+    clearBoard()
+}
+
+function clearBoard(){
+    
 }
 
 
